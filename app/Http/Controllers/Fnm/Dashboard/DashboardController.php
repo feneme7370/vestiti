@@ -11,7 +11,7 @@ class DashboardController extends Controller
     public function index()
     {
         return view('sistem.dashboard.dashboard', [
-            // 'user' => User::findOrFail($id)
+            'title' => 'Dashboard'
         ]);
     }
 }

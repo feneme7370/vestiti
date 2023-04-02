@@ -68,6 +68,44 @@
             </a>
           </li>
 
+          <li class="nav-header">CONFIGURACION</li>
+          <li class="nav-item">
+            <a href="{{route('cosechas.index')}}" class="nav-link {{request()->routeIs('cosechas.index') ? 'active' : ''}}">
+              <i class="fa-solid fa-house"></i>
+              <p>
+                Cosechas
+                {{-- <span class="right badge badge-danger">New</span> --}}
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{route('enfermedades.index')}}" class="nav-link {{request()->routeIs('enfermedades.index') ? 'active' : ''}}">
+              <i class="fa-solid fa-house"></i>
+              <p>
+                Enfermedades
+                {{-- <span class="right badge badge-danger">New</span> --}}
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{route('plagas.index')}}" class="nav-link {{request()->routeIs('plagas.index') ? 'active' : ''}}">
+              <i class="fa-solid fa-house"></i>
+              <p>
+                Plagas
+                {{-- <span class="right badge badge-danger">New</span> --}}
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{route('medicinas.index')}}" class="nav-link {{request()->routeIs('medicinas.index') ? 'active' : ''}}">
+              <i class="fa-solid fa-house"></i>
+              <p>
+                Medicamentos
+                {{-- <span class="right badge badge-danger">New</span> --}}
+              </p>
+            </a>
+          </li>
+
           <li class="nav-item">
             <a href="{{route('logout')}}" class="nav-link {{request()->routeIs('logout') ? 'active' : ''}}">
               <i class="fa-solid fa-arrow-right-from-bracket"></i>
