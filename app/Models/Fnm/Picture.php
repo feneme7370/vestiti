@@ -14,5 +14,7 @@ class Picture extends Model
         'slug',
         'type',
         'status',
+        'company_id',
+        'user_id'
     ];
 }

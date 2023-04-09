@@ -35,29 +35,6 @@
         <ul class="nav nav-pills nav-sidebar flex-column nav-legacy" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-          {{-- <li class="nav-item menu-open">
-            <a href="#" class="nav-link active">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>
-                Starter Pages
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="#" class="nav-link active">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Active Page</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Inactive Page</p>
-                </a>
-              </li>
-            </ul>
-          </li> --}}
           <li class="nav-item">
             <a href="{{route('dashboard')}}" class="nav-link {{request()->routeIs('dashboard') ? 'active' : ''}}">
               <i class="fa-solid fa-house"></i>
@@ -68,44 +45,84 @@
             </a>
           </li>
 
-          <li class="nav-header">CONFIGURACION</li>
+          <li class="nav-header">APIARIO</li>
           <li class="nav-item">
-            <a href="{{route('cosechas.index')}}" class="nav-link {{request()->routeIs('cosechas.index') ? 'active' : ''}}">
-              <i class="fa-solid fa-house"></i>
+            <a href="{{route('visitas.index')}}" class="nav-link {{request()->routeIs('visitas.index') ? 'active' : ''}}">
+              <i class="fa-solid fa-location-dot"></i>
               <p>
-                Cosechas
+                Visitas
                 {{-- <span class="right badge badge-danger">New</span> --}}
               </p>
             </a>
           </li>
-          <li class="nav-item">
-            <a href="{{route('enfermedades.index')}}" class="nav-link {{request()->routeIs('enfermedades.index') ? 'active' : ''}}">
-              <i class="fa-solid fa-house"></i>
+          <li class="nav-header">AJUSTES</li>
+          {{-- CONFIGURACION --}}
+          <li class="nav-item
+            {{request()->routeIs('apiarios.index') ? 'menu-open' : ''}}
+            {{request()->routeIs('cosechas.index') ? 'menu-open' : ''}}
+            {{request()->routeIs('enfermedades.index') ? 'menu-open' : ''}}
+            {{request()->routeIs('plagas.index') ? 'menu-open' : ''}}
+            {{request()->routeIs('medicinas.index') ? 'menu-open' : ''}}
+            ">
+            <a href="#" class="nav-link
+              {{request()->routeIs('apiarios.index') ? 'active' : ''}}
+              {{request()->routeIs('cosechas.index') ? 'active' : ''}}
+              {{request()->routeIs('enfermedades.index') ? 'active' : ''}}
+              {{request()->routeIs('plagas.index') ? 'active' : ''}}
+              {{request()->routeIs('medicinas.index') ? 'active' : ''}}
+            ">
+              <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
-                Enfermedades
-                {{-- <span class="right badge badge-danger">New</span> --}}
+                CONFIGURACION
+                <i class="right fas fa-angle-left"></i>
               </p>
             </a>
-          </li>
-          <li class="nav-item">
-            <a href="{{route('plagas.index')}}" class="nav-link {{request()->routeIs('plagas.index') ? 'active' : ''}}">
-              <i class="fa-solid fa-house"></i>
-              <p>
-                Plagas
-                {{-- <span class="right badge badge-danger">New</span> --}}
-              </p>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="{{route('medicinas.index')}}" class="nav-link {{request()->routeIs('medicinas.index') ? 'active' : ''}}">
-              <i class="fa-solid fa-house"></i>
-              <p>
-                Medicamentos
-                {{-- <span class="right badge badge-danger">New</span> --}}
-              </p>
-            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{route('apiarios.index')}}" class="nav-link {{request()->routeIs('apiarios.index') ? 'active' : ''}}">
+                  <i class="fa-brands fa-forumbee"></i>
+                  <p>
+                    Apiarios
+                    {{-- <span class="right badge badge-danger">New</span> --}}
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('cosechas.index')}}" class="nav-link {{request()->routeIs('cosechas.index') ? 'active' : ''}}">
+                  <i class="fa-solid fa-calendar-days"></i>
+                  <p>
+                    Cosechas
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('enfermedades.index')}}" class="nav-link {{request()->routeIs('enfermedades.index') ? 'active' : ''}}">
+                  <i class="fa-solid fa-disease"></i>
+                  <p>
+                    Enfermedades
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('plagas.index')}}" class="nav-link {{request()->routeIs('plagas.index') ? 'active' : ''}}">
+                  <i class="fa-solid fa-bug"></i>
+                  <p>
+                    Plagas
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('medicinas.index')}}" class="nav-link {{request()->routeIs('medicinas.index') ? 'active' : ''}}">
+                  <i class="fa-solid fa-syringe"></i>
+                  <p>
+                    Medicamentos
+                  </p>
+                </a>
+              </li>
+            </ul>
           </li>
 
+          <li class="nav-header">USUARIO</li>
           <li class="nav-item">
             <a href="{{route('logout')}}" class="nav-link {{request()->routeIs('logout') ? 'active' : ''}}">
               <i class="fa-solid fa-arrow-right-from-bracket"></i>

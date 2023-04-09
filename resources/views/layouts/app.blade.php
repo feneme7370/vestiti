@@ -8,11 +8,12 @@
         <title>{{ config('app.name', 'Laravel') }}</title>
 
         <link rel="icon" href="{{asset('img/app/logo.png')}}"> 
+        
         @include('layouts.adminLTE.head_link')
+        
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
-
-
+        
         <!-- Styles -->
         @livewireStyles
     </head>
@@ -33,13 +34,14 @@
         </div>
         <!-- ./wrapper -->
         @livewireScripts
-
+        
         @include('layouts.adminLTE.sidebar-r')
         @include('layouts.adminLTE.footer')
         @include('layouts.adminLTE.footer_link')
-
+        
         @stack('modals')
         @stack('scripts')
+        
 
     </body>
 </html>

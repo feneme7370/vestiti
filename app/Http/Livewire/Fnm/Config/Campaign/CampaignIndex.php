@@ -39,6 +39,8 @@ class CampaignIndex extends Component
         $validateData = $this->validate();
         $validateData['slug'] = Str::slug($validateData['name']);
         $validateData['status'] = '1';
+        $validateData['user_id'] = auth()->user()->id;
+        $validateData['company_id'] = auth()->user()->id;
         
         $campaign = Campaign::create($validateData);
         session()->flash('message', 'creado correctamente');
@@ -62,6 +64,8 @@ class CampaignIndex extends Component
         $validateData = $this->validate();
         $validateData['slug'] = Str::slug($validateData['name']);
         $validateData['status'] = $validateData['status'] ? '1' : '0';
+        $validateData['user_id'] = auth()->user()->id;
+        $validateData['company_id'] = auth()->user()->id;
 
         Campaign::findOrFail($this->campaign_idm)->update($validateData);
 

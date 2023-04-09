@@ -15,8 +15,8 @@ class MedicineSeeder extends Seeder
      */
     public function run()
     {
-        Medicine::create(['name' => 'Medicina 1', 'slug' => 'Medicina 1','description' => 'la descripcion']);
-        Medicine::create(['name' => 'Medicina 2', 'slug' => 'Medicina 2','description' => 'la descripcion']);
-        Medicine::create(['name' => 'Medicina 3', 'slug' => 'Medicina 3','description' => 'la descripcion']);
+        Medicine::create(['name' => 'Medicina 1', 'slug' => 'Medicina 1','description' => 'la descripcion', 'company_id' => '1', 'user_id' => '1']);
+        Medicine::create(['name' => 'Medicina 2', 'slug' => 'Medicina 2','description' => 'la descripcion', 'company_id' => '1', 'user_id' => '1']);
+        Medicine::create(['name' => 'Medicina 3', 'slug' => 'Medicina 3','description' => 'la descripcion', 'company_id' => '1', 'user_id' => '1']);
     }
 }

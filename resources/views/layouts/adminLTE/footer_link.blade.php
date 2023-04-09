@@ -9,6 +9,9 @@
 <!-- Toastr js -->
 <script src="{{ asset('fnm/libs/toastr/toastr.min.js')}}"></script>
 
+<!-- Select2 -->
+<script src="{{ asset('fnm/libs/select2-4.1.0-rc.0/dist/js/select2.min.js')}}"></script>
+
 <!-- Datatables -->
 {{-- <script type="text/javascript" src="{{asset('fnm/libs/DataTables/JSZip-2.5.0/jszip.min.js')}}"></script> --}}
 {{-- <script type="text/javascript" src="{{asset('fnm/libs/DataTables/pdfmake-0.1.36/pdfmake.min.js')}}"></script> --}}

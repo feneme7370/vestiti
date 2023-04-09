@@ -39,6 +39,8 @@ class DiseaseIndex extends Component
         $validateData = $this->validate();
         $validateData['slug'] = Str::slug($validateData['name']);
         $validateData['status'] = '1';
+        $validateData['user_id'] = auth()->user()->id;
+        $validateData['company_id'] = auth()->user()->id;
         
         $disease = Disease::create($validateData);
         session()->flash('message', 'creado correctamente');
@@ -62,6 +64,8 @@ class DiseaseIndex extends Component
         $validateData = $this->validate();
         $validateData['slug'] = Str::slug($validateData['name']);
         $validateData['status'] = $validateData['status'] ? '1' : '0';
+        $validateData['user_id'] = auth()->user()->id;
+        $validateData['company_id'] = auth()->user()->id;
 
         Disease::findOrFail($this->disease_idm)->update($validateData);
 

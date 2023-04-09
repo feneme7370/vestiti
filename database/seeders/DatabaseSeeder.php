@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
+use Database\Seeders\Fnm\ApiarySeeder;
 use Illuminate\Database\Seeder;
 use Database\Seeders\Fnm\DaySeeder;
 use Database\Seeders\Fnm\RoleSeeder;
@@ -15,6 +16,8 @@ use Database\Seeders\Fnm\CategorySeeder;
 use Database\Seeders\Fnm\MedicineSeeder;
 use Database\Seeders\Fnm\PlagueSeeder;
 use Database\Seeders\Fnm\TypeMoneySeeder;
+use Database\Seeders\Fnm\TypeVisitSeeder;
+use Database\Seeders\Fnm\VisitSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -36,7 +39,10 @@ class DatabaseSeeder extends Seeder
             CampaignSeeder::class,
             DiseaseSeeder::class,
             PlagueSeeder::class,
+            TypeVisitSeeder::class,
             MedicineSeeder::class,
+            ApiarySeeder::class,
+            VisitSeeder::class,
         ]);
         // \App\Models\User::factory(10)->create();
 

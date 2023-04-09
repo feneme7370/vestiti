@@ -15,8 +15,8 @@ class DiseaseSeeder extends Seeder
      */
     public function run()
     {
-        Disease::create(['name' => 'Enfermedad 1', 'slug' => 'Enfermedad 1','description' => 'la descripcion']);
-        Disease::create(['name' => 'Enfermedad 2', 'slug' => 'Enfermedad 2','description' => 'la descripcion']);
-        Disease::create(['name' => 'Enfermedad 3', 'slug' => 'Enfermedad 3','description' => 'la descripcion']);
+        Disease::create(['name' => 'Enfermedad 1', 'slug' => 'Enfermedad 1','description' => 'la descripcion', 'company_id' => '1', 'user_id' => '1']);
+        Disease::create(['name' => 'Enfermedad 2', 'slug' => 'Enfermedad 2','description' => 'la descripcion', 'company_id' => '1', 'user_id' => '1']);
+        Disease::create(['name' => 'Enfermedad 3', 'slug' => 'Enfermedad 3','description' => 'la descripcion', 'company_id' => '1', 'user_id' => '1']);
     }
 }

@@ -14,5 +14,7 @@ class Campaign extends Model
         'slug',
         'description',
         'status',
+        'company_id',
+        'user_id'
     ];
 }

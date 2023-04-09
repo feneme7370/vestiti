@@ -15,7 +15,17 @@ class CategorySeeder extends Seeder
      */
     public function run()
     {
-        Category::create(['type' => 'egresos', 'name' => 'compra', 'slug' => 'compra','description' => 'la descripcion']);
-        Category::create(['type' => 'ingresos', 'name' => 'venta', 'slug' => 'venta','description' => 'la descripcion']);
+        Category::create([
+            'type' => 'egresos', 
+            'name' => 'compra', 
+            'slug' => 'compra',
+            'description' => 'la descripcion',
+        ]);
+        Category::create([
+            'type' => 'ingresos', 
+            'name' => 'venta', 
+            'slug' => 'venta',
+            'description' => 'la descripcion',
+        ]);
     }
 }

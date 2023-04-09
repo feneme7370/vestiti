@@ -32,7 +32,7 @@
         @apply bg-gray-700 hover:bg-gray-800;
     }
 
-    .t_btn-dlt, .t_btn-edt{
+    .t_btn-dlt, .t_btn-edt, .t_btn-ctd{
         @apply rounded cursor-pointer inline-block text-center py-1 w-8 h-8 text-white hover:text-white;
     }
     .t_btn-dlt{
@@ -83,10 +83,13 @@
     .t_label{
         @apply block font-extrabold text-sm text-gray-700;
     }
-    .t_input, .t_input-checkbox, .t_input-file, .t_input-textarea{
-        @apply rounded border border-green-600 focus:ring-green-700 focus:border-green-700  active:ring-green-700;
+    .t_input, .t_input-checkbox, .t_input-file, .t_input-textarea, .t_input-select2, .select2{
+        @apply rounded border border-green-600 focus:ring-green-700 focus:border-green-700  active:ring-green-700 p-2;
     }
     .t_input{
+        @apply w-full;
+    }
+    .t_input-select2, .select2{
         @apply w-full;
     }
     .t_input-file{
